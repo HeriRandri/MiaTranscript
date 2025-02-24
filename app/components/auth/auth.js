@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaGoogle, FaFacebook, FaEnvelope, FaKey } from "react-icons/fa";
 import Link from "next/link";
-import { signin, signup } from "./utils/auth";
+// import { signin, signup } from "./utils/auth";
 
 // import { useRouter } from "next/router";
 
@@ -54,7 +54,7 @@ export default function AuthPage({ type = "signup" }) {
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-teal-500">
-          {type === "signup" ? "Budgeteo" : "Welcome to Budgeteo"}
+          {type === "signup" ? "MiaTranscrit" : "Welcome to MiaTranscrit"}
         </h2>
         <p className="text-center text-gray-600 mb-4">
           {type === "signup" ? "Create an account" : ""}

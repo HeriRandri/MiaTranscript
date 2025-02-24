@@ -1,6 +1,6 @@
 "use client";
 
-import Auth from "@/app/page";
+import Auth from "../../components/auth/auth";
 
 const Login = () => {
   return (

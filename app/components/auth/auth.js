@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { FaGoogle, FaFacebook, FaEnvelope, FaKey } from "react-icons/fa";
 import Link from "next/link";
-// import { signin, signup } from "./utils/auth";
-
+import { signup, signin } from "@/app/utils/auth";
 // import { useRouter } from "next/router";
 
 export default function AuthPage({ type = "signup" }) {
@@ -44,9 +43,10 @@ export default function AuthPage({ type = "signup" }) {
       const data = await signin(formData);
 
       if (data && !data.error) {
-        location.assign(`/dashboard/${data.user.id}`);
+        console.log(data.user_id);
+        location.assign(`/dashboard/${data.user_id}`);
       } else {
-        alert(data.error || "Erreur de connexion");
+        console.log(data.error);
       }
     }
   };
